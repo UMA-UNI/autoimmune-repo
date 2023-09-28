@@ -10,7 +10,8 @@ from PIL import Image
 import numpy as np
 import pickle
 import streamlit as st
-loadmodel=pickle.load(open('C:/Users/Uma R/autoimmune-repo/psofeat_modelpickle.sav', 'rb'))
+loadmodel = pickle.load(open('C:/Users/Uma R/autoimmune-repo/psofeat_modelpickle.sav', 'rb'))
+#loadmodel=pickle.load(open('C:/Users/Uma R/autoimmune-repo/psofeat_modelpickle.sav', 'rb'))
 
 def arthritis_prediction(inputs):    
 
