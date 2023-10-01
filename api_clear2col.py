@@ -10,6 +10,8 @@ from PIL import Image
 import numpy as np
 import pickle
 import streamlit as st
+import os
+print("Current directory:", os.getcwd())  # Print the current directory
 # loadmodel=pickle.load(open('C:/Users/Uma R/psofeat_modelpickle.sav', 'rb'))
 print("Attempting to load model from:", 'C:/Users/Uma R/psofeat_modelpickle.sav')
 try:
