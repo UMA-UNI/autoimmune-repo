@@ -10,8 +10,14 @@ from PIL import Image
 import numpy as np
 import pickle
 import streamlit as st
-loadmodel=pickle.load(open('C:/Users/Uma R/psofeat_modelpickle.sav', 'rb'))
-
+# loadmodel=pickle.load(open('C:/Users/Uma R/psofeat_modelpickle.sav', 'rb'))
+print("Attempting to load model from:", 'C:/Users/Uma R/psofeat_modelpickle.sav')
+try:
+    with open('C:/Users/Uma R/psofeat_modelpickle.sav', 'rb') as model_file:
+        loadmodel = pickle.load(model_file)
+except Exception as e:
+    print("Error loading the model:", str(e))
+    raise e
 def arthritis_prediction(inputs):    
 
     idp=np.asarray(inputs)
